@@ -1,43 +1,37 @@
 ﻿/*
 * Copyright (C) JAMK/IT/Esa Salmikangas
 * This file is part of the IIO11300 course project.
-* Created: 12.1.2016 Modified: 13.1.2016
-* Authors: Tero ,Esa Salmikangas
+* Created: 12.1.2016 Modified: 14.1.2016
+* Authors: Joni Kukko, Esa Salmikangas
 */
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+
 
 namespace Tehtava1
 {
-  /// <summary>
-  /// Interaction logic for MainWindow.xaml
-  /// </summary>
-  public partial class MainWindow : Window
-  {
-    public MainWindow()
+    public partial class MainWindow : Window
     {
-      InitializeComponent();
-    }
+        public MainWindow()
+        {
+            InitializeComponent();
+        }
 
+        
         private void btnCalculate_Click(object sender, RoutedEventArgs e)
         {
-            //TODO
             try
             {
-                double result;
-                result = BusinessLogicWindow.CalculatePerimeter(1, 1);
+                double result, widht, height;
+
+                // Default value of 0 is used if tryparse fails
+                double.TryParse(txtWidht.Text, out widht);
+                double.TryParse(txtHeight.Text, out height);
+
+                result = BusinessLogicWindow.CalculatePerimeter(widht, height);
+
+                txtPerimeter.Text = result.ToString();
+
             }
             catch (Exception ex)
             {
@@ -46,23 +40,15 @@ namespace Tehtava1
             finally
             {
                 //yield to an user that everything okay
+                // WHY? "finally" is executed even when there where exceptions.
+                MessageBox.Show("Everything might be okay.");
             }
         }
 
-    private void btnClose_Click(object sender, RoutedEventArgs e)
-    {
-      Application.Current.Shutdown();
-    }
-  }
-
-  public class BusinessLogicWindow
-    {
-    /// <summary>
-    /// CalculatePerimeter calculates the perimeter of a window
-    /// </summary>
-    public static double CalculatePerimeter(double widht, double height)
+        
+        private void btnClose_Click(object sender, RoutedEventArgs e)
         {
-            throw new System.NotImplementedException();
+            Application.Current.Shutdown();
         }
     }
 }
