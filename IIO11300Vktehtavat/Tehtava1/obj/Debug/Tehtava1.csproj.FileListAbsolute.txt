@@ -1,0 +1,14 @@
+D:\H3247\IIO11300\IIO11300Vktehtavat\Tehtava1\bin\Debug\Tehtava1.exe.config
+D:\H3247\IIO11300\IIO11300Vktehtavat\Tehtava1\bin\Debug\Tehtava1.exe
+D:\H3247\IIO11300\IIO11300Vktehtavat\Tehtava1\bin\Debug\Tehtava1.pdb
+D:\H3247\IIO11300\IIO11300Vktehtavat\Tehtava1\obj\Debug\Tehtava1.csprojResolveAssemblyReference.cache
+D:\H3247\IIO11300\IIO11300Vktehtavat\Tehtava1\obj\Debug\MainWindow.g.cs
+D:\H3247\IIO11300\IIO11300Vktehtavat\Tehtava1\obj\Debug\App.g.cs
+D:\H3247\IIO11300\IIO11300Vktehtavat\Tehtava1\obj\Debug\Tehtava1_MarkupCompile.cache
+D:\H3247\IIO11300\IIO11300Vktehtavat\Tehtava1\obj\Debug\Tehtava1_MarkupCompile.lref
+D:\H3247\IIO11300\IIO11300Vktehtavat\Tehtava1\obj\Debug\MainWindow.baml
+D:\H3247\IIO11300\IIO11300Vktehtavat\Tehtava1\obj\Debug\Tehtava1.g.resources
+D:\H3247\IIO11300\IIO11300Vktehtavat\Tehtava1\obj\Debug\Tehtava1.Properties.Resources.resources
+D:\H3247\IIO11300\IIO11300Vktehtavat\Tehtava1\obj\Debug\Tehtava1.csproj.GenerateResource.Cache
+D:\H3247\IIO11300\IIO11300Vktehtavat\Tehtava1\obj\Debug\Tehtava1.exe
+D:\H3247\IIO11300\IIO11300Vktehtavat\Tehtava1\obj\Debug\Tehtava1.pdb

@@ -1,7 +1,7 @@
 ﻿/*
 * Copyright (C) JAMK/IT/Esa Salmikangas
 * This file is part of the IIO11300 course project.
-* Created: 12.1.2016 Modified: 14.1.2016
+* Created: 12.1.2016 Modified: 20.1.2016
 * Authors: Joni Kukko, Esa Salmikangas
 */
 using System;
@@ -22,26 +22,28 @@ namespace Tehtava1
         {
             try
             {
-                double result, widht, height;
+                double resultWindowArea, resultFrameSphere, resultFrameArea, windowWidht, windowHeight, frameWidht;
 
                 // Default value of 0 is used if tryparse fails
-                double.TryParse(txtWidht.Text, out widht);
-                double.TryParse(txtHeight.Text, out height);
+                double.TryParse(txtWindowWidht.Text, out windowWidht);
+                double.TryParse(txtWindowHeight.Text, out windowHeight);
+                double.TryParse(txtFrameWidht.Text, out frameWidht);
 
-                result = BusinessLogicWindow.CalculatePerimeter(widht, height);
+                // Calculate results
+                resultWindowArea = BusinessLogicWindow.CalculateWindowArea(windowWidht, windowHeight);
+                resultFrameSphere = BusinessLogicWindow.CalculateFrameSphere(windowWidht, windowHeight);
+                resultFrameArea = BusinessLogicWindow.CalculateFrameArea(windowWidht, windowHeight, frameWidht);
 
-                txtPerimeter.Text = result.ToString();
+
+                // Show results
+                txtWindowArea.Text = resultWindowArea.ToString();
+                txtFrameSphere.Text = resultFrameSphere.ToString();
+                txtFrameArea.Text = resultFrameArea.ToString();
 
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                //yield to an user that everything okay
-                // WHY? "finally" is executed even when there where exceptions.
-                MessageBox.Show("Everything might be okay.");
             }
         }
 

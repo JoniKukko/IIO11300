@@ -10,21 +10,34 @@
         <StackPanel Orientation="Horizontal">
             
             <StackPanel Orientation="Vertical">
-                <TextBlock x:Name="tbWidht" Text="Ikkunan leveys" Height="28" Margin="10,10,10,0" />
-                <TextBox x:Name="txtWidht" Text="600" Height="28" Width="114" Margin="10,10,10,0" />
-                <TextBlock x:Name="tbHeight" Text="Ikkunan korkeus" Height="28" Margin="10,10,10,0" />
-                <TextBox x:Name="txtHeight" Text="400" Height="28" Width="114" Margin="10,10,10,0" />
-                <TextBlock x:Name="tbPerimeter" Text="Ikkunan kehä" Height="28" Margin="10,10,10,0" />
-                <TextBox x:Name="txtPerimeter" Text="2000" Height="28" Width="114" Margin="10,10,10,0" IsReadOnly="True"/>
+                <TextBlock x:Name="tbWindowWidht" Text="Ikkunan leveys" Height="28" Margin="10,10,10,0" />
+                <TextBox x:Name="txtWindowWidht" Text="1200" Height="28" Width="114" Margin="10,10,10,0" />
+                
+                <TextBlock x:Name="tbWindowHeight" Text="Ikkunan korkeus" Height="28" Margin="10,10,10,0" />
+                <TextBox x:Name="txtWindowHeight" Text="900" Height="28" Width="114" Margin="10,10,10,0" />
+                
+                <TextBlock x:Name="tbFrameWidht" Text="Karmin leveys" Height="28" Margin="10,10,10,0" />
+                <TextBox x:Name="txtFrameWidht" Text="45" Height="28" Width="114" Margin="10,10,10,0"/>
             </StackPanel>
+            
             
             <StackPanel Orientation="Vertical">
                 <Rectangle x:Name="myRectangle" Fill="#FF10ABF3" StrokeThickness="2" Width="300" Height="100" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10" Stroke="Black" />
             </StackPanel>
             
+            
             <StackPanel Orientation="Vertical">
                 <Button x:Name="btnCalculate" Content="Laske pinta-ala ja piiri" Height="32" Width="180" Click="btnCalculate_Click" Margin="10,10,10,0"/>
                 <Button x:Name="btnClose" Content="Sulje" Height="32" Width="180" Click="btnClose_Click" Margin="10,10,10,0"/>
+
+                <TextBlock x:Name="tbWindowArea" Text="Ikkunan pinta-ala" Height="28" Margin="25,10,10,0" />
+                <TextBox x:Name="txtWindowArea" Text="1080000" Height="28" Width="114" Margin="0,0,10,0" IsReadOnly="True" TextAlignment="Center" BorderThickness="0"/>
+
+                <TextBlock x:Name="tbFrameSphere" Text="Karmin piiri" Height="28" Margin="45,10,10,0" />
+                <TextBox x:Name="txtFrameSphere" Text="4200" Height="28" Width="114" Margin="0,0,10,0" IsReadOnly="True" TextAlignment="Center" BorderThickness="0"/>
+
+                <TextBlock x:Name="tbFrameWindowArea" Text="Karmin pinta-ala" Height="28" Margin="30,10,10,0" />
+                <TextBox x:Name="txtFrameArea" Text="184950" Height="28" Width="114" Margin="0,0,10,0" IsReadOnly="True" TextAlignment="Center" BorderThickness="0"/>
             </StackPanel>
             
         </StackPanel>
