@@ -1,0 +1,13 @@
+D:\H3247\IIO11300\IIO11300Vktehtavat\H1MediaPlayer\bin\Debug\H1MediaPlayer.exe.config
+D:\H3247\IIO11300\IIO11300Vktehtavat\H1MediaPlayer\bin\Debug\H1MediaPlayer.exe
+D:\H3247\IIO11300\IIO11300Vktehtavat\H1MediaPlayer\bin\Debug\H1MediaPlayer.pdb
+D:\H3247\IIO11300\IIO11300Vktehtavat\H1MediaPlayer\obj\Debug\MainWindow.g.cs
+D:\H3247\IIO11300\IIO11300Vktehtavat\H1MediaPlayer\obj\Debug\App.g.cs
+D:\H3247\IIO11300\IIO11300Vktehtavat\H1MediaPlayer\obj\Debug\H1MediaPlayer_MarkupCompile.cache
+D:\H3247\IIO11300\IIO11300Vktehtavat\H1MediaPlayer\obj\Debug\H1MediaPlayer_MarkupCompile.lref
+D:\H3247\IIO11300\IIO11300Vktehtavat\H1MediaPlayer\obj\Debug\MainWindow.baml
+D:\H3247\IIO11300\IIO11300Vktehtavat\H1MediaPlayer\obj\Debug\H1MediaPlayer.g.resources
+D:\H3247\IIO11300\IIO11300Vktehtavat\H1MediaPlayer\obj\Debug\H1MediaPlayer.Properties.Resources.resources
+D:\H3247\IIO11300\IIO11300Vktehtavat\H1MediaPlayer\obj\Debug\H1MediaPlayer.csproj.GenerateResource.Cache
+D:\H3247\IIO11300\IIO11300Vktehtavat\H1MediaPlayer\obj\Debug\H1MediaPlayer.exe
+D:\H3247\IIO11300\IIO11300Vktehtavat\H1MediaPlayer\obj\Debug\H1MediaPlayer.pdb
