@@ -1,0 +1,14 @@
+D:\H3247\IIO11300\IIO11300Vktehtavat\Tehtava3D\bin\Debug\Tehtava3D.exe.config
+D:\H3247\IIO11300\IIO11300Vktehtavat\Tehtava3D\obj\Debug\Tehtava3D.csprojResolveAssemblyReference.cache
+D:\H3247\IIO11300\IIO11300Vktehtavat\Tehtava3D\obj\Debug\MainWindow.g.cs
+D:\H3247\IIO11300\IIO11300Vktehtavat\Tehtava3D\obj\Debug\App.g.cs
+D:\H3247\IIO11300\IIO11300Vktehtavat\Tehtava3D\obj\Debug\Tehtava3D_MarkupCompile.cache
+D:\H3247\IIO11300\IIO11300Vktehtavat\Tehtava3D\obj\Debug\Tehtava3D_MarkupCompile.lref
+D:\H3247\IIO11300\IIO11300Vktehtavat\Tehtava3D\bin\Debug\Tehtava3D.exe
+D:\H3247\IIO11300\IIO11300Vktehtavat\Tehtava3D\bin\Debug\Tehtava3D.pdb
+D:\H3247\IIO11300\IIO11300Vktehtavat\Tehtava3D\obj\Debug\MainWindow.baml
+D:\H3247\IIO11300\IIO11300Vktehtavat\Tehtava3D\obj\Debug\Tehtava3D.g.resources
+D:\H3247\IIO11300\IIO11300Vktehtavat\Tehtava3D\obj\Debug\Tehtava3D.Properties.Resources.resources
+D:\H3247\IIO11300\IIO11300Vktehtavat\Tehtava3D\obj\Debug\Tehtava3D.csproj.GenerateResource.Cache
+D:\H3247\IIO11300\IIO11300Vktehtavat\Tehtava3D\obj\Debug\Tehtava3D.exe
+D:\H3247\IIO11300\IIO11300Vktehtavat\Tehtava3D\obj\Debug\Tehtava3D.pdb
