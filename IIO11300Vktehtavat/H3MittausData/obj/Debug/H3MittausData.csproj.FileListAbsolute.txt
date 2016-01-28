@@ -1,0 +1,14 @@
+D:\salesa\01Keskiviikko\H3MittausData\bin\Debug\H3MittausData.exe.config
+D:\salesa\01Keskiviikko\H3MittausData\bin\Debug\H3MittausData.exe
+D:\salesa\01Keskiviikko\H3MittausData\bin\Debug\H3MittausData.pdb
+D:\salesa\01Keskiviikko\H3MittausData\obj\Debug\H3MittausData.csprojResolveAssemblyReference.cache
+D:\salesa\01Keskiviikko\H3MittausData\obj\Debug\MainWindow.g.cs
+D:\salesa\01Keskiviikko\H3MittausData\obj\Debug\App.g.cs
+D:\salesa\01Keskiviikko\H3MittausData\obj\Debug\H3MittausData_MarkupCompile.cache
+D:\salesa\01Keskiviikko\H3MittausData\obj\Debug\H3MittausData_MarkupCompile.lref
+D:\salesa\01Keskiviikko\H3MittausData\obj\Debug\MainWindow.baml
+D:\salesa\01Keskiviikko\H3MittausData\obj\Debug\H3MittausData.g.resources
+D:\salesa\01Keskiviikko\H3MittausData\obj\Debug\H3MittausData.Properties.Resources.resources
+D:\salesa\01Keskiviikko\H3MittausData\obj\Debug\H3MittausData.csproj.GenerateResource.Cache
+D:\salesa\01Keskiviikko\H3MittausData\obj\Debug\H3MittausData.exe
+D:\salesa\01Keskiviikko\H3MittausData\obj\Debug\H3MittausData.pdb
