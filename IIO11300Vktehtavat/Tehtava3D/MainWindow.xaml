@@ -10,14 +10,14 @@
         <StackPanel Orientation="Vertical">
             <StackPanel Orientation="Horizontal">
                 <Label Content="Backup path" Width="80" Margin="5" />
-                <TextBox x:Name="txtboxFilename" Width="340" Margin="5" />
+                <TextBox x:Name="txtboxPath" Width="340" Margin="5" TextChanged="txtboxPath_TextChanged" />
                 <Button x:Name="btnBrowse" Content="Browse" Width="60" Margin="5" Click="btnBrowse_Click" />
-                <Button x:Name="btnAnalyze" Content="Analyze" Width="60" Margin="5" IsEnabled="False" />
+                <Button x:Name="btnAnalyze" Content="Analyze" Width="60" Margin="5" IsEnabled="False" Click="btnAnalyze_Click" />
             </StackPanel>
             
             <StackPanel Orientation="Horizontal">
                 <Label Content="Select VM" Width="80" Margin="5" />
-                <ComboBox Margin="5" Width="200" SelectedIndex="0" IsEnabled="False">
+                <ComboBox x:Name="cbVirtualMachine" Margin="5" Width="200" SelectedIndex="1" IsEnabled="False">
                     <ComboBoxItem Content="All" />
                     <ComboBoxItem Content="SERVER-VMROU"/>
                     <ComboBoxItem Content="SERVER-VMDEV"/>

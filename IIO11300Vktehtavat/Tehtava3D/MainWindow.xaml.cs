@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.IO;
 using System.Windows;
 using System.Windows.Forms;
 
@@ -11,6 +12,7 @@ namespace Tehtava3D
             InitializeComponent();
             this.test();
         }
+
 
         private void test()
         {
@@ -28,11 +30,39 @@ namespace Tehtava3D
             dgFileList.ItemsSource = lista;
         }
 
+
         private void btnBrowse_Click(object sender, RoutedEventArgs e)
         {
             FolderBrowserDialog dialog = new FolderBrowserDialog();
             DialogResult result = dialog.ShowDialog();
-            txtboxFilename.Text = result.ToString();
+            if (result.ToString() == "OK") txtboxPath.Text = dialog.SelectedPath;
+        }
+
+
+        private void txtboxPath_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
+        {
+            dgFileList.ItemsSource = null;
+            btnSave.IsEnabled = false;
+            btnUpdate.IsEnabled = false;
+            btnAnalyze.IsEnabled = !string.IsNullOrWhiteSpace(txtboxPath.Text);
+            cbVirtualMachine.IsEnabled = false;
+            cbVirtualMachine.SelectedIndex = 0;
+        }
+
+
+        private void btnAnalyze_Click(object sender, RoutedEventArgs e)
+        {
+            if (!Directory.Exists(txtboxPath.Text))
+                System.Windows.MessageBox.Show("Selected path is not valid!");
+            else
+            {
+                string[] virtualMachines = Directory.GetDirectories(txtboxPath.Text);
+                foreach (string virtualMachine in virtualMachines)
+                {
+                    System.Windows.MessageBox.Show(virtualMachine);
+                }
+                cbVirtualMachine.IsEnabled = true;
+            }
         }
     }
 }
