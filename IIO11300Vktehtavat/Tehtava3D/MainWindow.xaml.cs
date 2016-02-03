@@ -10,27 +10,9 @@ namespace Tehtava3D
         public MainWindow()
         {
             InitializeComponent();
-            this.test();
         }
-
-
-        private void test()
-        {
-            List<FileModel> lista = new List<FileModel>();
-
-            for (int i = 0; i < 100; i++)
-            {
-                FileModel temp = new FileModel();
-                temp.Name = "Nimi " + i.ToString();
-                temp.Path = "Path/to/file/if/there/is/one/well/there/always/is" + i.ToString();
-                temp.Ext = "exe";
-                lista.Add(temp);
-            }
-
-            dgFileList.ItemsSource = lista;
-        }
-
-
+        
+        
         private void btnBrowse_Click(object sender, RoutedEventArgs e)
         {
             FolderBrowserDialog dialog = new FolderBrowserDialog();
@@ -43,26 +25,75 @@ namespace Tehtava3D
         {
             dgFileList.ItemsSource = null;
             btnSave.IsEnabled = false;
-            btnUpdate.IsEnabled = false;
             btnAnalyze.IsEnabled = !string.IsNullOrWhiteSpace(txtboxPath.Text);
             cbVirtualMachine.IsEnabled = false;
-            cbVirtualMachine.SelectedIndex = 0;
+            cbVirtualMachine.ItemsSource = null;
+            btnUpdate.IsEnabled = false;
         }
 
 
         private void btnAnalyze_Click(object sender, RoutedEventArgs e)
         {
             if (!Directory.Exists(txtboxPath.Text))
-                System.Windows.MessageBox.Show("Selected path is not valid!");
+                System.Windows.MessageBox.Show("Backup path is not valid!");
             else
             {
-                string[] virtualMachines = Directory.GetDirectories(txtboxPath.Text);
-                foreach (string virtualMachine in virtualMachines)
+                List<FolderModel> virtualmachines = new List<FolderModel>();
+                string[] VMpaths = Directory.GetDirectories(txtboxPath.Text);
+
+                // Add first value "all"
+                FolderModel All = new FolderModel();
+                All.Name = "All";
+                All.Path = txtboxPath.Text;
+                virtualmachines.Add(All);
+
+                foreach (string VMpath in VMpaths)
                 {
-                    System.Windows.MessageBox.Show(virtualMachine);
+                    FolderModel virtualmachine = new FolderModel();
+                    virtualmachine.Name = Path.GetFileName(VMpath);
+                    virtualmachine.Path = Path.GetDirectoryName(VMpath) + "\\";
+                    virtualmachines.Add(virtualmachine);
                 }
+
+                cbVirtualMachine.DisplayMemberPath = "Name";
+                cbVirtualMachine.ItemsSource = virtualmachines;
                 cbVirtualMachine.IsEnabled = true;
             }
+        }
+
+
+
+        private void cbVirtualMachine_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        {
+            btnUpdate.IsEnabled = true;
+        }
+
+
+
+        private void btnUpdate_Click(object sender, RoutedEventArgs e)
+        {
+            FolderModel selectedVM = (FolderModel)cbVirtualMachine.SelectedItem;
+
+            string checkPath = cbVirtualMachine.SelectedIndex == 0 ? selectedVM.Path : selectedVM.FullPath ;
+            string[] filePaths = Directory.GetFiles(checkPath, "*", SearchOption.AllDirectories);
+            List<FileModel> files = new List<FileModel>();
+
+            foreach (string filePath in filePaths)
+            {
+                FileModel file = new FileModel();
+                file.Name = Path.GetFileNameWithoutExtension(filePath);
+                file.Ext = Path.GetExtension(filePath);
+                files.Add(file);
+            }
+
+            dgFileList.ItemsSource = files;
+        }
+
+
+
+        private void btnSave_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

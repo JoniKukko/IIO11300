@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Tehtava3D
 {
@@ -14,6 +15,9 @@ namespace Tehtava3D
             }
         }
         public int Size { get; set; }
+        public List<FileModel> versions { get; set; }
+        public string VirtualMachine { get; set; }
+        public string BackupFolder { get; set; }
         public string Path { get; set; }
         public string Name { get; set; }
         public string Ext { get; set; }
@@ -21,7 +25,7 @@ namespace Tehtava3D
         {
             get
             {
-                return this.Path + this.Name + "." + this.Ext;
+                return this.Path + this.Name + this.Ext;
             }
         }
 

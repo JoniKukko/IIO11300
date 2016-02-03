@@ -17,14 +17,9 @@
             
             <StackPanel Orientation="Horizontal">
                 <Label Content="Select VM" Width="80" Margin="5" />
-                <ComboBox x:Name="cbVirtualMachine" Margin="5" Width="200" SelectedIndex="1" IsEnabled="False">
-                    <ComboBoxItem Content="All" />
-                    <ComboBoxItem Content="SERVER-VMROU"/>
-                    <ComboBoxItem Content="SERVER-VMDEV"/>
-                    <ComboBoxItem Content="SERVER-VMPRO"/>
-                </ComboBox>
-                <Button x:Name="btnUpdate" Content="Update" Width="60" Margin="5" IsEnabled="False"/>
-                <Button x:Name="btnSave" Content="Save" Width="60" Margin="5" IsEnabled="False"/>
+                <ComboBox x:Name="cbVirtualMachine" Margin="5" Width="200" IsEnabled="False" SelectionChanged="cbVirtualMachine_SelectionChanged" />
+                <Button x:Name="btnUpdate" Content="Update" Width="60" Margin="5" IsEnabled="False" Click="btnUpdate_Click"/>
+                <Button x:Name="btnSave" Content="Save" Width="60" Margin="5" IsEnabled="False" Click="btnSave_Click"/>
             </StackPanel>
 
             <StackPanel Orientation="Vertical">
