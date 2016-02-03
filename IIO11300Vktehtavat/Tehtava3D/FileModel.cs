@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 
 namespace Tehtava3D
 {
+    [Serializable]
     class FileModel
     {
         public DateTime Created { get; set; }
@@ -11,23 +13,17 @@ namespace Tehtava3D
         {
             get
             {
-                return this.Name + "." + this.Ext;
+                return this.Name + this.Ext;
             }
         }
-        public int Size { get; set; }
-        public List<FileModel> versions { get; set; }
+        public long Size { get; set; }
+        public List<FileModel> Versions { get; set; }
         public string VirtualMachine { get; set; }
-        public string BackupFolder { get; set; }
         public string Path { get; set; }
+        public string BackupFolder { get; set; }
         public string Name { get; set; }
         public string Ext { get; set; }
-        public string FullPath
-        {
-            get
-            {
-                return this.Path + this.Name + this.Ext;
-            }
-        }
+        public string RealPath { get; set; }
 
     }
 }

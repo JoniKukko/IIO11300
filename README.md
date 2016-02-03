@@ -5,3 +5,6 @@ Tehty kokonaan.
 
 ## Tehtävä 2
 Tehty kokonaan.
+
+## Tehtava 3D
+Backup Analyzer palvelimien varmuuskopioiden tarkastelemiseen.
