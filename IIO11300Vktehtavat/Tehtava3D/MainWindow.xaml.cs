@@ -1,4 +1,15 @@
-﻿using System;
+﻿/*
+ * Copyright (C) JAMK/IT/Joni Kukko
+ * This file is part of the IIO11300 course project.
+ * Authors: Joni Kukko
+ * Comment: Palvelimilta tulevat varmuuskopiot menevät hankalaan hakemistorakenteeseen 14 version/palvelin vuoksi. 
+ * Hakemistorakenne esim. PalvelimenNimi/Daily/7/. BackupAnalyzer listaa tiedostot ja yhdistää versiot näkymään 
+ * jolloin viimeisimmän version palautus halutusta tiedostosta on helpompaa. 
+ * Tukee myös tuloksien tallentamista bin-tiedostoon lokihistorian omaisesti. 
+ * Lukeminen bin-tiedostosta vielä kesken.
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.IO;
