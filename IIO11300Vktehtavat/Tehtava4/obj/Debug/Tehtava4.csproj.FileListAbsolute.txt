@@ -1,0 +1,13 @@
+C:\Users\VMhomeUser\School\IIO11300\IIO11300Vktehtavat\Tehtava4\bin\Debug\Tehtava4.exe.config
+C:\Users\VMhomeUser\School\IIO11300\IIO11300Vktehtavat\Tehtava4\bin\Debug\Tehtava4.exe
+C:\Users\VMhomeUser\School\IIO11300\IIO11300Vktehtavat\Tehtava4\bin\Debug\Tehtava4.pdb
+C:\Users\VMhomeUser\School\IIO11300\IIO11300Vktehtavat\Tehtava4\obj\Debug\MainWindow.g.cs
+C:\Users\VMhomeUser\School\IIO11300\IIO11300Vktehtavat\Tehtava4\obj\Debug\App.g.cs
+C:\Users\VMhomeUser\School\IIO11300\IIO11300Vktehtavat\Tehtava4\obj\Debug\Tehtava4_MarkupCompile.cache
+C:\Users\VMhomeUser\School\IIO11300\IIO11300Vktehtavat\Tehtava4\obj\Debug\Tehtava4_MarkupCompile.lref
+C:\Users\VMhomeUser\School\IIO11300\IIO11300Vktehtavat\Tehtava4\obj\Debug\MainWindow.baml
+C:\Users\VMhomeUser\School\IIO11300\IIO11300Vktehtavat\Tehtava4\obj\Debug\Tehtava4.g.resources
+C:\Users\VMhomeUser\School\IIO11300\IIO11300Vktehtavat\Tehtava4\obj\Debug\Tehtava4.Properties.Resources.resources
+C:\Users\VMhomeUser\School\IIO11300\IIO11300Vktehtavat\Tehtava4\obj\Debug\Tehtava4.csproj.GenerateResource.Cache
+C:\Users\VMhomeUser\School\IIO11300\IIO11300Vktehtavat\Tehtava4\obj\Debug\Tehtava4.exe
+C:\Users\VMhomeUser\School\IIO11300\IIO11300Vktehtavat\Tehtava4\obj\Debug\Tehtava4.pdb
