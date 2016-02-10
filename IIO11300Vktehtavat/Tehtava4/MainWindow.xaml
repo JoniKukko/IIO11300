@@ -18,9 +18,9 @@
         <ComboBox x:Name="cbClub" HorizontalAlignment="Left" Margin="79,107,0,0" VerticalAlignment="Top" Width="120"/>
         
         <Button x:Name="btnNewPlayer" Content="Luo uusi pelaaja" HorizontalAlignment="Left" Margin="204,13,0,0" VerticalAlignment="Top" Width="120" Height="23" Click="btnNewPlayer_Click"/>
-        <Button x:Name="btnSavePlayer" Content="Talleta pelaaja" HorizontalAlignment="Left" Margin="204,44,0,0" VerticalAlignment="Top" Width="120" Height="23"/>
-        <Button x:Name="btnDeletePlayer" Content="Poista pelaaja" HorizontalAlignment="Left" Margin="204,75,0,0" VerticalAlignment="Top" Width="120" Height="23"/>
-        <Button x:Name="btnWritePlayers" Content="Kirjoita pelaajat" HorizontalAlignment="Left" Margin="204,107,0,0" VerticalAlignment="Top" Width="120" Height="22"/>
+        <Button x:Name="btnSavePlayer" Content="Talleta pelaaja" HorizontalAlignment="Left" Margin="204,44,0,0" VerticalAlignment="Top" Width="120" Height="23" Click="btnSavePlayer_Click"/>
+        <Button x:Name="btnDeletePlayer" Content="Poista pelaaja" HorizontalAlignment="Left" Margin="204,75,0,0" VerticalAlignment="Top" Width="120" Height="23" Click="btnDeletePlayer_Click"/>
+        <Button x:Name="btnWritePlayers" Content="Kirjoita pelaajat" HorizontalAlignment="Left" Margin="204,107,0,0" VerticalAlignment="Top" Width="120" Height="22" Click="btnWritePlayers_Click"/>
         <Button x:Name="btnExit" Content="Lopetus" HorizontalAlignment="Left" Margin="204,139,0,0" VerticalAlignment="Top" Width="120" Height="22" Click="btnExit_Click"/>
 
         <ListBox x:Name="lbPlayerList" ItemsSource="{Binding}" HorizontalAlignment="Left" Height="148" Margin="329,13,0,0" VerticalAlignment="Top" Width="200" SelectionChanged="lbPlayerList_SelectionChanged">

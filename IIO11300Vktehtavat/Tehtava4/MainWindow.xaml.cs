@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -11,16 +13,19 @@ namespace Tehtava4
             "Blues", "HIFK", "HPK", "Ilves", "JYP",
             "Kalpa", "KooKoo", "Kärpät", "Lukko", "Pelicans",
             "SaiPa", "Sport", "Tappara", "TPS", "Ässät" };
-        private List<Pelaaja> players = new List<Pelaaja>();
+
+        private Pelaajat pelaajat = new Pelaajat();
+
 
 
         public MainWindow()
         {
             InitializeComponent();
+            // alustukset
             this.cbClub.ItemsSource = this.clubs;
             this.cbClub.SelectedIndex = 0;
             this.tbStatusbar.Text = "Seurat ladattu";
-            this.lbPlayerList.ItemsSource = this.players;
+            this.lbPlayerList.ItemsSource = this.pelaajat.pelaajat;
         }
 
 
@@ -36,28 +41,18 @@ namespace Tehtava4
         // uuden pelaajan luonti
         private void btnNewPlayer_Click(object sender, RoutedEventArgs e)
         {
-            try {
+            try
+            {
                 // luodaan uusi pelaaja
                 decimal price;
                 Decimal.TryParse(this.tbPrice.Text, out price);
-                Pelaaja newPlayer = new Pelaaja(this.tbFirstname.Text, this.tbLastname.Text, this.cbClub.SelectedItem.ToString(), price);
+                this.pelaajat.insertPlayer(this.tbFirstname.Text, this.tbLastname.Text, this.cbClub.SelectedItem.ToString(), price);
 
-                // Tarkistetaan ettei samannimistä vielä ole
-                if (this.players.Exists(x => x.KokoNimi == newPlayer.KokoNimi))
-                    throw new Exception("Pelaaja on jo listalla!");
-
-                // lisätään ja päivitetään lista
-                this.players.Add(newPlayer);
+                // päivitetään lista ja tyhjennetään arvot
                 this.lbPlayerList.Items.Refresh();
-
-                // tyhjennetään valinnat
-                this.tbFirstname.Text = "";
-                this.tbLastname.Text = "";
-                this.tbPrice.Text = "";
-                this.cbClub.SelectedIndex = 0;
+                this.ClearValues();
 
                 this.tbStatusbar.Text = "Pelaaja lisätty";
-                
             } catch(Exception ex)
             {
                 this.tbStatusbar.Text = ex.Message;
@@ -65,30 +60,106 @@ namespace Tehtava4
         }
 
 
+
         // haetaan pelaajan tiedot
         private void lbPlayerList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             try
             {
-                // tarkistetaan ettei valinta ole tyhjä
-                // vähän huono paikka tälle..
-                if (lbPlayerList.SelectedItem == null)
-                    throw new Exception("Pelaajaa ei ole valittu");
-
                 // haetaan pelaaja
-                int playerIndex = this.players.FindIndex(x => x.EsitysNimi == lbPlayerList.SelectedItem.ToString());
+                Pelaaja pelaaja = this.pelaajat.selectPlayer(lbPlayerList.SelectedItem.ToString());
 
-                this.tbFirstname.Text = this.players[playerIndex].Etunimi;
-                this.tbLastname.Text = this.players[playerIndex].Sukunimi;
-                this.tbPrice.Text = this.players[playerIndex].Siirtohinta.ToString();
-                this.cbClub.SelectedValue = this.players[playerIndex].Seura;
+                this.tbFirstname.Text = pelaaja.Etunimi;
+                this.tbLastname.Text = pelaaja.Sukunimi;
+                this.tbPrice.Text = pelaaja.Siirtohinta.ToString();
+                this.cbClub.SelectedValue = pelaaja.Seura;
 
-                this.tbStatusbar.Text = "Pelaajan tiedot ladattu";
+                this.tbStatusbar.Text = "Pelaajan tiedot ladattu.";
             }
             catch (Exception ex)
             {
                 this.tbStatusbar.Text = ex.Message;
             }
         }
+
+
+
+        // pelaajan poisto
+        private void btnDeletePlayer_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                // haetaan pelaajan indeksi ja poistetaan se
+                this.pelaajat.deletePlayer(lbPlayerList.SelectedItem.ToString());
+                this.lbPlayerList.Items.Refresh();
+                this.ClearValues();
+
+                this.tbStatusbar.Text = "Pelaaja poistettu.";
+            }
+            catch (Exception ex)
+            {
+                this.tbStatusbar.Text = ex.Message;
+            }
+        }
+
+
+
+        // talleta muutokset
+        private void btnSavePlayer_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                // luodaan uusi pelaaja
+                decimal price;
+                Decimal.TryParse(this.tbPrice.Text, out price);
+                this.pelaajat.insertPlayer(this.tbFirstname.Text, this.tbLastname.Text, this.cbClub.SelectedItem.ToString(), price);
+
+                // poistetaan vanha pelaaja
+                this.pelaajat.deletePlayer(lbPlayerList.SelectedItem.ToString());
+
+                this.lbPlayerList.Items.Refresh();
+                this.ClearValues();
+                this.tbStatusbar.Text = "Pelaajan tiedot päivitetty.";
+            }
+            catch (Exception ex)
+            {
+                this.tbStatusbar.Text = ex.Message;
+            }
+        }
+
+
+
+        // pelaajien tallennus
+        private void btnWritePlayers_Click(object sender, RoutedEventArgs e)
+        {
+            // näytetään ja kysytään käyttäjältä tallennus sijainti
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.InitialDirectory = Convert.ToString(Environment.SpecialFolder.MyDocuments);
+            Nullable<bool> result = sfd.ShowDialog();
+            
+            // jos sijainti on true
+            if (result == true)
+            {
+                using (Stream stream = File.Open(sfd.FileName, FileMode.Create))
+                {
+                    // serialisoidaan lista pelaajista ja tallennetaan streamin kautta
+                    var bformatter = new System.Runtime.Serialization.Formatters.Binary.BinaryFormatter();
+                    bformatter.Serialize(stream, this.pelaajat.pelaajat);
+                }
+            }
+        }
+
+
+
+        // apumetodi
+        private void ClearValues()
+        {
+            // tyhjennetään valinnat
+            this.tbFirstname.Text = "";
+            this.tbLastname.Text = "";
+            this.tbPrice.Text = "";
+            this.cbClub.SelectedIndex = 0;
+        }
+
     }
 }

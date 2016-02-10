@@ -3,6 +3,7 @@ using System.ComponentModel;
 
 namespace Tehtava4
 {
+    [Serializable]
     class Pelaaja
     {
 
