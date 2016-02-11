@@ -1,0 +1,14 @@
+D:\H3247\IIO11300\IIO11300Vktehtavat\Tehtava5\bin\Debug\Tehtava4.exe.config
+D:\H3247\IIO11300\IIO11300Vktehtavat\Tehtava5\obj\Debug\Tehtava4.exe
+D:\H3247\IIO11300\IIO11300Vktehtavat\Tehtava5\obj\Debug\Tehtava4.pdb
+D:\H3247\IIO11300\IIO11300Vktehtavat\Tehtava5\bin\Debug\Tehtava4.exe
+D:\H3247\IIO11300\IIO11300Vktehtavat\Tehtava5\bin\Debug\Tehtava4.pdb
+D:\H3247\IIO11300\IIO11300Vktehtavat\Tehtava5\obj\Debug\MainWindow.g.cs
+D:\H3247\IIO11300\IIO11300Vktehtavat\Tehtava5\obj\Debug\App.g.cs
+D:\H3247\IIO11300\IIO11300Vktehtavat\Tehtava5\obj\Debug\Tehtava4_MarkupCompile.cache
+D:\H3247\IIO11300\IIO11300Vktehtavat\Tehtava5\obj\Debug\Tehtava4_MarkupCompile.lref
+D:\H3247\IIO11300\IIO11300Vktehtavat\Tehtava5\obj\Debug\MainWindow.baml
+D:\H3247\IIO11300\IIO11300Vktehtavat\Tehtava5\obj\Debug\Tehtava4.g.resources
+D:\H3247\IIO11300\IIO11300Vktehtavat\Tehtava5\obj\Debug\Tehtava4.Properties.Resources.resources
+D:\H3247\IIO11300\IIO11300Vktehtavat\Tehtava5\obj\Debug\Tehtava5.csproj.GenerateResource.Cache
+D:\H3247\IIO11300\IIO11300Vktehtavat\Tehtava5\obj\Debug\Tehtava5.csprojResolveAssemblyReference.cache

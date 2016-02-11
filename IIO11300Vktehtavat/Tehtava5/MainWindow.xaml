@@ -1,0 +1,35 @@
+﻿<Window x:Class="Tehtava4.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tehtava4"
+        mc:Ignorable="d"
+        Title="Oudot oliot SM-liigassa" Height="260" Width="550" ResizeMode="NoResize">
+    <Grid>
+        <Label x:Name="lbFirstname" Content="Etunimi" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lbLastname" Content="Sukunimi" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lbPrice" Content="Siirtohinta" HorizontalAlignment="Left" Margin="10,72,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lbClub" Content="Seura" HorizontalAlignment="Left" Margin="10,103,0,0" VerticalAlignment="Top"/>
+
+        <TextBox x:Name="tbFirstname" HorizontalAlignment="Left" Height="23" Margin="79,13,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tbLastname" HorizontalAlignment="Left" Height="23" Margin="79,44,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tbPrice" HorizontalAlignment="Left" Height="23" Margin="79,75,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
+        <ComboBox x:Name="cbClub" HorizontalAlignment="Left" Margin="79,107,0,0" VerticalAlignment="Top" Width="120"/>
+        
+        <Button x:Name="btnNewPlayer" Content="Luo uusi pelaaja" HorizontalAlignment="Left" Margin="204,13,0,0" VerticalAlignment="Top" Width="120" Height="23" Click="btnNewPlayer_Click"/>
+        <Button x:Name="btnSavePlayer" Content="Talleta pelaaja" HorizontalAlignment="Left" Margin="204,44,0,0" VerticalAlignment="Top" Width="120" Height="23" Click="btnSavePlayer_Click"/>
+        <Button x:Name="btnDeletePlayer" Content="Poista pelaaja" HorizontalAlignment="Left" Margin="204,75,0,0" VerticalAlignment="Top" Width="120" Height="23" Click="btnDeletePlayer_Click"/>
+        <Button x:Name="btnWritePlayers" Content="Kirjoita pelaajat" HorizontalAlignment="Left" Margin="204,107,0,0" VerticalAlignment="Top" Width="120" Height="23" Click="btnWritePlayers_Click"/>
+        <Button x:Name="btnReadPlayers" Content="Lue pelaajat" HorizontalAlignment="Left" Margin="204,139,0,0" VerticalAlignment="Top" Width="120" Height="23" Click="btnReadPlayers_Click"/>
+        <Button x:Name="btnExit" Content="Lopetus" HorizontalAlignment="Left" Margin="204,173,0,0" VerticalAlignment="Top" Width="120" Height="23" Click="btnExit_Click"/>
+
+        <ListBox x:Name="lbPlayerList" ItemsSource="{Binding}" HorizontalAlignment="Left" Height="148" Margin="329,13,0,0" VerticalAlignment="Top" Width="200" SelectionChanged="lbPlayerList_SelectionChanged">
+        </ListBox>
+
+        <StatusBar HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="544" Margin="0,201,0,0" Padding="0">
+            <TextBlock x:Name="tbStatusbar" TextWrapping="Wrap" Margin="0" />
+        </StatusBar>
+        
+    </Grid>
+</Window>
