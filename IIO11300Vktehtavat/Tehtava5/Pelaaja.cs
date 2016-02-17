@@ -4,13 +4,13 @@ using System.ComponentModel;
 namespace Tehtava4
 {
     [Serializable]
-    class Pelaaja
+    public class Pelaaja
     {
 
-        public string Etunimi { get; private set; }
-        public string Sukunimi { get; private set; }
-        public string Seura { get; private set; }
-        public decimal Siirtohinta { get; private set; }
+        public string Etunimi { get; set; }
+        public string Sukunimi { get; set; }
+        public string Seura { get; set; }
+        public decimal Siirtohinta { get; set; }
         
         public string KokoNimi
         {
@@ -33,9 +33,10 @@ namespace Tehtava4
         {
             return this.EsitysNimi;
         }
+
+        // for xmlSerialize
+        public Pelaaja() { }
         
-
-
         public Pelaaja(string etunimi, string sukunimi, string seura, decimal siirtohinta)
         {
             if (etunimi == "")
