@@ -26,7 +26,7 @@
         <Label x:Name="specialSymbolCount" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="110,193,0,0"/>
         
         
-        <Label x:Name="result" Content="anna salasana" FontSize="50" HorizontalAlignment="Left" Background="silver" VerticalAlignment="Top" Margin="0,224,0,0" Height="95" Width="517"/>
+        <Label x:Name="result" FontSize="50" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,224,0,0" Height="95" Width="517"/>
 
 
     </Grid>
