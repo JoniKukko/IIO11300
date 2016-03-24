@@ -1,0 +1,13 @@
+D:\H3247\IIO11300\IIO11300Vktehtavat\H9BookshopORM\bin\Debug\H9BookshopORM.exe.config
+D:\H3247\IIO11300\IIO11300Vktehtavat\H9BookshopORM\bin\Debug\H9BookshopORM.exe
+D:\H3247\IIO11300\IIO11300Vktehtavat\H9BookshopORM\bin\Debug\H9BookshopORM.pdb
+D:\H3247\IIO11300\IIO11300Vktehtavat\H9BookshopORM\obj\Debug\MainWindow.g.cs
+D:\H3247\IIO11300\IIO11300Vktehtavat\H9BookshopORM\obj\Debug\App.g.cs
+D:\H3247\IIO11300\IIO11300Vktehtavat\H9BookshopORM\obj\Debug\H9BookshopORM_MarkupCompile.cache
+D:\H3247\IIO11300\IIO11300Vktehtavat\H9BookshopORM\obj\Debug\H9BookshopORM_MarkupCompile.lref
+D:\H3247\IIO11300\IIO11300Vktehtavat\H9BookshopORM\obj\Debug\MainWindow.baml
+D:\H3247\IIO11300\IIO11300Vktehtavat\H9BookshopORM\obj\Debug\H9BookshopORM.g.resources
+D:\H3247\IIO11300\IIO11300Vktehtavat\H9BookshopORM\obj\Debug\H9BookshopORM.Properties.Resources.resources
+D:\H3247\IIO11300\IIO11300Vktehtavat\H9BookshopORM\obj\Debug\H9BookshopORM.csproj.GenerateResource.Cache
+D:\H3247\IIO11300\IIO11300Vktehtavat\H9BookshopORM\obj\Debug\H9BookshopORM.exe
+D:\H3247\IIO11300\IIO11300Vktehtavat\H9BookshopORM\obj\Debug\H9BookshopORM.pdb
